@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' blob: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://*.supabase.co https://*.upstash.io;">
+  <title>Resources — Classroom Hub</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+</head>
+<body>
+  <header id="mainHeader"></header>
+  <main>
+    <section class="page active">
+      <h1>Resources</h1>
+      <p class="subtitle">Select a subject to browse materials</p>
+      <div id="adminUploadBar" style="display:none;margin-bottom:1rem">
+        <button class="btn btn-primary" onclick="openTopicModal()">+ New Topic</button>
+      </div>
+      <div class="subject-tabs" id="subjectTabs"></div>
+      <div id="topicsContainer"></div>
+    </section>
+  </main>
+  <footer id="mainFooter"></footer>
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Modal</h2>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts"></div>
+  <script src="js/app.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/resources.js"></script>
+</body>
+</html>

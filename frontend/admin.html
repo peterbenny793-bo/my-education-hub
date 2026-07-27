@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.upstash.io;">
+  <title>Admin — Classroom Hub</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+</head>
+<body>
+  <header id="mainHeader"></header>
+  <main>
+    <section class="page active">
+      <div id="adminLogin">
+        <div class="login-box card">
+          <h1>Admin Login</h1>
+          <p class="subtitle">Teacher access only</p>
+          <form id="loginForm">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" id="loginUser" required autocomplete="username" />
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="loginPass" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+          </form>
+        </div>
+      </div>
+      <div id="adminPanel" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem">
+          <h1>Admin Dashboard</h1>
+          <button class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-tab="messages" onclick="switchAdminTab('messages')">Messages</button>
+          <button class="admin-tab" data-tab="posts" onclick="switchAdminTab('posts')">Posts</button>
+          <button class="admin-tab" data-tab="resources" onclick="switchAdminTab('resources')">Resources</button>
+          <button class="admin-tab" data-tab="notifications" onclick="switchAdminTab('notifications')">Notifications</button>
+        </div>
+        <div id="adminContent"></div>
+      </div>
+    </section>
+  </main>
+  <footer id="mainFooter"></footer>
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Modal</h2>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts"></div>
+  <script src="js/app.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

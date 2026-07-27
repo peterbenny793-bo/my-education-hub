@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' blob: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://*.supabase.co https://*.upstash.io;">
+  <title>Classroom Hub — Home</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+</head>
+<body>
+  <header id="mainHeader"></header>
+  <main>
+    <section class="page active">
+      <div class="hero">
+        <h1>Welcome to Classroom Hub</h1>
+        <p>Your one-stop destination for lessons, announcements, and resources</p>
+        <a href="resources.html" class="btn">Browse Resources →</a>
+      </div>
+      <div class="grid">
+        <div class="feature-card" onclick="location.href='announcements.html'">
+          <div class="feature-icon">📢</div><h3>Announcements</h3>
+          <p>Stay updated with the latest news and class updates</p>
+        </div>
+        <div class="feature-card" onclick="location.href='resources.html'">
+          <div class="feature-icon">📖</div><h3>Resources</h3>
+          <p>Access notes, videos, and materials for every subject</p>
+        </div>
+        <div class="feature-card" onclick="location.href='contact.html'">
+          <div class="feature-icon">✉️</div><h3>Contact</h3>
+          <p>Reach out with questions, feedback, or inquiries</p>
+        </div>
+        <div class="feature-card" onclick="location.href='admin.html'">
+          <div class="feature-icon">🔐</div><h3>Admin</h3>
+          <p>Teacher login for managing content</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="mainFooter"></footer>
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Modal</h2>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts"></div>
+  <script src="js/app.js"></script>
+  <script src="js/notifications.js"></script>
+</body>
+</html>

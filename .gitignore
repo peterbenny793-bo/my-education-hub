@@ -1,0 +1,46 @@
+cat > .gitignore << 'EOF'
+# Environment variables — real secrets, never commit these
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Node (in case tooling gets added to the frontend later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Deployment
+.vercel/
+.render/
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+EOF

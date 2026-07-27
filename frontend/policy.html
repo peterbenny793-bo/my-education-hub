@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.upstash.io;">
+  <title>Privacy &amp; Content Policy — Classroom Hub</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+</head>
+<body>
+  <header id="mainHeader"></header>
+  <main>
+    <section class="page active">
+      <h1>Privacy &amp; Content Policy</h1>
+      <p class="subtitle">Last updated July 2026 — how Classroom Hub handles information and content</p>
+
+      <div class="card policy-section">
+        <h2>Who this is for</h2>
+        <p>Classroom Hub is provided by Bayune Lutheran Secondary School for students, parents, guardians, and teachers connected to the school. This page explains what information the site collects, how content you post is handled, and what's expected of everyone using it.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>Information we collect</h2>
+        <ul>
+          <li><strong>Contact form:</strong> your name, status (parent, student, warden, or citizen), class if you're a student, phone number or email, and your message — collected only when you submit the form, so the school can get back to you.</li>
+          <li><strong>Comments and reactions</strong> you choose to leave on an announcement, which are visible to other visitors on that announcement.</li>
+          <li><strong>Teacher/admin accounts:</strong> a username and password for staff who manage content on the site.</li>
+        </ul>
+        <p>We don't run tracking scripts, analytics, or advertising on this site, and we don't collect anything about you beyond what's listed above.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>How we use it</h2>
+        <ul>
+          <li>Contact form submissions are used only to respond to your enquiry — they aren't shared outside the school.</li>
+          <li>Announcements, notices, and resources are managed by teachers and shown to everyone who visits the site.</li>
+          <li>Notes, videos, and images uploaded by teachers are stored so students can view or download them.</li>
+        </ul>
+      </div>
+
+      <div class="card policy-section">
+        <h2>Where things are stored</h2>
+        <p>Classroom Hub relies on a few outside services to run:</p>
+        <ul>
+          <li><strong>Supabase</strong> — stores form submissions and site content</li>
+          <li><strong>Cloudinary</strong> — hosts uploaded files, images, and videos</li>
+          <li><strong>Upstash (Redis)</strong> — temporarily caches pages to keep the site fast</li>
+          <li><strong>YouTube</strong> — if a teacher links a video instead of uploading one, it plays through YouTube's own embedded player</li>
+        </ul>
+        <p>None of these providers use information from this site for their own advertising.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>Posting on Classroom Hub</h2>
+        <p>Comments, replies, and contact messages should stay respectful and on-topic. Please don't post:</p>
+        <ul>
+          <li>anything abusive, threatening, or bullying toward another student, teacher, or visitor</li>
+          <li>someone else's personal information, such as their phone number or address</li>
+          <li>spam, advertising, or content unrelated to schoolwork</li>
+        </ul>
+        <p>Teachers and admins can edit or remove any post that doesn't follow these guidelines, and may follow up directly with a student if needed.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>For parents and guardians</h2>
+        <p>If you have questions about information a student has submitted or posted, or you'd like something removed, please reach out through the Contact page and a teacher will follow up.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>Changes to this policy</h2>
+        <p>We may update this page as Classroom Hub adds new features. Check back here for the latest version.</p>
+      </div>
+
+      <div class="card policy-section">
+        <h2>Questions</h2>
+        <p>For anything not covered here, please get in touch through the Contact page.</p>
+      </div>
+
+      <p class="policy-note">This page describes how Classroom Hub generally works today. It's written to be clear and accurate, not as a substitute for formal legal advice.</p>
+    </section>
+  </main>
+  <footer id="mainFooter"></footer>
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle">Modal</h2>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast-container" id="toasts"></div>
+  <script src="js/app.js"></script>
+  <script src="js/notifications.js"></script>
+</body>
+</html>
