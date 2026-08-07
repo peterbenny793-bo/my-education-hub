@@ -14,7 +14,7 @@ const API_BASE = (() => {
     if (m) return `https://${m[1]}-5000${m[2]}/api`;
   }
 
-  return 'https://my-education-hub.vercel.app/api';
+  return 'https://my-education-hub-6n8g.vercel.app';
 })();
 
 /* ── XSS Sanitizer ── */

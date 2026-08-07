@@ -16,8 +16,8 @@ from .cache import cache_get, cache_set, cache_delete
 
 auth_bp = Blueprint("auth", __name__)
 
-ADMIN_USER = os.getenv("ADMIN_USERNAME", "teacher")
-ADMIN_PASS = os.getenv("ADMIN_PASSWORD", "teacher123")
+ADMIN_USER = os.getenv("ADMIN_USERNAME", "mrbenny")
+ADMIN_PASS = os.getenv("ADMIN_PASSWORD", "@taukwebwaga123")
 
 SESSION_TTL = 12 * 60 * 60   # a session stays alive for 12h after its last use
 MAX_ATTEMPTS = 5             # failed logins allowed per IP before a lockout
